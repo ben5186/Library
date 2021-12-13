@@ -32,19 +32,21 @@ def borrowBook(book):
     found = False
     hasFine = False
     for fine in fineList:
-        if # finish this
-    for element in bookList:
-        if book[thirdTag+1:fourthTag] == element[0]:
-            if element[1] == 0:
-                found = False
-            else:
-                found = True
-                element[1] -= 1
-    if found:
+        if fine[0] == book[secondTag+1:thirdTag]:
+            hasFine = True
+    if not(hasFine):
+        for element in bookList:
+            if book[thirdTag+1:fourthTag] == element[0]:
+                if element[1] == 0:
+                    found = False
+                else:
+                    found = True
+                    element[1] -= 1
+    if not(hasFine) and found:
         borrowList.append([str(book[thirdTag+1:fourthTag]),str(book[secondTag+1:thirdTag]),
                    int(book[firstTag+1:secondTag]),int(book[fourthTag+1:])])
     else:
-        print("We dont have that book, can't be borrowed")
+        print("Can't be borrowed")
 
 def returnBook(book):
     firstTag = book.index("#")
