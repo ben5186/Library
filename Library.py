@@ -10,6 +10,20 @@ def initialBooks():
             restricted = False
         bookList.append([str(book[:firstTag]),int(book[firstTag+1:secondTag]),restricted,0, int(book[firstTag+1:secondTag])])
 
+def libraryRead():
+  for x in lLog:
+    task = str(x).rstrip()
+    if(task[0]=="B"):
+        borrowBook(task)
+    elif(task[0]=="R"):
+        #Return Function
+    elif(task[0]=="P"):
+        payFine(task)
+    elif(task[0]=="A"):
+        addBook(task)
+    else:
+        currentDay=int(task)
+
 def addBook(book):
     firstTag = book.index("#")
     secondTag = firstTag+book[firstTag+1:].index("#")+1
@@ -48,6 +62,30 @@ def borrowBook(book):
     else:
         print("Can't be borrowed")
 
+def tallyBook(days, bookName):
+    for book in bookList:
+        if(book[0] == bookName):
+            book[3]+=days
+
+def payFine(task):
+    tag1=int(task.index("#"))
+    tag2=int(task.find("#",tag1+1))
+    tag3=int(task.find("#",tag2+1))
+    person=task[tag2+1:tag3]
+    day=task[tag1+1:tag2]
+    paid=task[tag3+1]
+    for x in fineList:
+        if(x[0]==person):
+            x[1]=x[1]-paid
+        if(x[1]<=0):
+            fineList.pop(x)
+
+def endTally():
+        for book in borrowList:
+       	    for element in bookList:
+            	if(element[0] == book[0]):
+               	element[3] += currentDay-book[2]
+
 def returnBook(book):
     firstTag = book.index("#")
     secondTag = firstTag+book[firstTag+1:].index("#")+1
@@ -72,8 +110,9 @@ def returnBook(book):
                         else:
                             fineList.append([book[secondTag+1:thirdTag],(int(book[firstTag+1:secondTag])-(element[2]+element[3]))])
 
-def libraryReader():
-    True
+def ratioBook():
+    for book in bookList:
+        book.append(float(book[4]/book[3]))
 
 def tallyBook(days, bookName):
     True
