@@ -62,18 +62,18 @@ def returnBook(book):
                 if restricted:
                     for person in fineList:
                         if person == book[secondTag+1:thridTag]:
-                            book[1] += (int(book[firstTag+1:secondTag])-(element[2]+element[3]))*5]
+                            book[1] += (int(book[firstTag+1:secondTag])-(element[2]+element[3]))*5
                         else:
                             fineList.append([book[secondTag+1:thirdTag],(int(book[firstTag+1:secondTag])-(element[2]+element[3]))*5])
                 else:
                     for person in fineList:
                         if person == book[secondTag+1:thridTag]:
-                            book[1] += (int(book[firstTag+1:secondTag])-(element[2]+element[3]))*5]
+                            book[1] += (int(book[firstTag+1:secondTag])-(element[2]+element[3]))
                         else:
                             fineList.append([book[secondTag+1:thirdTag],(int(book[firstTag+1:secondTag])-(element[2]+element[3]))])
 
 def libraryReader():
-
+    True
 
 def tallyBook(days, bookName):
     True
