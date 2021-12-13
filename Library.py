@@ -106,5 +106,4 @@ print(bookList)
 print(borrowList)
 print(fineList)
 
-#fucki!
-
+# oh lordy lord
