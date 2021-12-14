@@ -11,18 +11,18 @@ def initialBooks():
         bookList.append([str(book[:firstTag]),int(book[firstTag+1:secondTag]),restricted,0, int(book[firstTag+1:secondTag])])
 
 def libraryRead():
-  for x in lLog:
-    task = str(x).rstrip()
-    if(task[0]=="B"):
-        borrowBook(task)
-    elif(task[0]=="R"):
-        #Return Function
-    elif(task[0]=="P"):
-        payFine(task)
-    elif(task[0]=="A"):
-        addBook(task)
-    else:
-        currentDay=int(task)
+    for x in lLog:
+        task = str(x).rstrip()
+        if(task[0]=="B"):
+            borrowBook(task)
+        #elif(task[0]=="R"):
+            #Return Function
+        elif(task[0]=="P"):
+            payFine(task)
+        elif(task[0]=="A"):
+            addBook(task)
+        else:
+            currentDay=int(task)
 
 def addBook(book):
     firstTag = book.index("#")
@@ -118,8 +118,15 @@ def tallyBook(days, bookName):
     True
 def endTally():
     True
+
 def mostPopular():
-    True
+    currentName="none"
+    currentMost=0
+    for book in booklist:
+         if(int(book[3])>currentMost):
+             currentMost=int(book[3])
+             currentName=book[0]
+    #How do we want to output this function?
 
 def ratioBook():
     for book in bookList:
