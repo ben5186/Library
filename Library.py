@@ -92,6 +92,7 @@ def returnBook(book):
     thirdTag = secondTag+book[secondTag+1:].index("#")+1
     for element in borrowList:
         if element[0] == book[thirdTag+1:] and element[1] == book[secondTag+1:thirdTag]:
+            tallyBook(int(book[firstTag+1:secondTag])-(element[2]+element[3], element[0])
             if element[3] > int(book[firstTag+1:secondTag])-(element[2]+element[3]):
                 restricted = True
                 for x in bookList:
