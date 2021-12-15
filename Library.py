@@ -93,7 +93,7 @@ def returnBook(book):
     for element in borrowList:
         if element[0] == book[thirdTag+1:] and element[1] == book[secondTag+1:thirdTag]:
             tallyBook(int(book[firstTag+1:secondTag])-(element[2]+element[3], element[0])
-            if element[3] > int(book[firstTag+1:secondTag])-(element[2]+element[3]):
+            if (element[3] > int(book[firstTag+1:secondTag])-(element[2]+element[3])):
                 addFine(int(book[firstTag+1:secondTag])-element[2], element[3], book[thirdTag+1:] ,book[secondTag+1:thirdTag])
 
 def addFine(days, allowedDays, bookName, name):
