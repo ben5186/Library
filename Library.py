@@ -110,7 +110,7 @@ def returnBook(book):
                             book[1] += (int(book[firstTag+1:secondTag])-(element[2]+element[3]))
                         else:
                             fineList.append([book[secondTag+1:thirdTag],(int(book[firstTag+1:secondTag])-(element[2]+element[3]))])
-def addFine(days, name):
+def addFine(days, , name):
     True
 def addAllFine():
     True
