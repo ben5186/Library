@@ -16,8 +16,7 @@ def libraryRead():
         if(task[0]=="B"):
             borrowBook(task)
         elif(task[0]=="R"):
-            True
-            #Return Function
+            returnBook(task)
         elif(task[0]=="P"):
             payFine(task)
         elif(task[0]=="A"):
@@ -149,7 +148,7 @@ print(bookList)
 borrowBook("B#1#adam#harry potter#6")
 borrowBook("B#2#ben#Dune#10")
 returnBook("R#10#adam#harry potter")
+libraryRead()
 print(bookList)
 print(borrowList)
 print(fineList)
-libraryRead()
