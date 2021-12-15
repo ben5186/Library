@@ -145,16 +145,9 @@ borrowList = [] # [book name, person name, day borrowed, days allowed]
 currentDay = 0
 
 initialBooks()
-print(bookList)
-addBook("A#1#Mice of Men")
-addBook("A#1#Enders Game")
-print(bookList)
-borrowBook("B#1#adam#harry potter#6")
-borrowBook("B#2#ben#Dune#10")
-returnBook("R#10#adam#harry potter")
 libraryRead()
 print(bookList)
-print(borrowList)
 print(fineList)
+print(borrowList)
 
 # comment
