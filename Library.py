@@ -92,8 +92,9 @@ def returnBook(book):
     thirdTag = secondTag+book[secondTag+1:].index("#")+1
     for element in borrowList:
         if element[0] == book[thirdTag+1:] and element[1] == book[secondTag+1:thirdTag]:
-            tallyBook(int(book[firstTag+1:secondTag])-(element[2]+element[3], element[0])
-            if element[3] > int(book[firstTag+1:secondTag])-(element[2]+element[3]):
+            tallyBook(int(book[firstTag+1:secondTag])-(element[2]+element[3], element[0]))
+            print(element[3], int(book[firstTag+1:secondTag])-(element[2]+element[3]))
+            if element[3] > (int(book[firstTag+1:secondTag])-(element[2]+element[3])):
                 addFine(int(book[firstTag+1:secondTag])-element[2], element[3], book[thirdTag+1:] ,book[secondTag+1:thirdTag])
 
 def addFine(days, allowedDays, bookName, name):
@@ -106,13 +107,13 @@ def addFine(days, allowedDays, bookName, name):
             if fine[0] == name:
                 fine[1] += (days-allowedDays)*5
             else:
-                fineList.append(name,(days-allowedDays)*5])
+                fineList.append([name,(days-allowedDays)*5])
     else:
         for fine in fineList:
             if fine[0] == name:
                 fine[1] += (days-allowedDays)
             else:
-                fineList.append(name,days-allowedDays)
+                fineList.append([name,days-allowedDays])
 
 def endFine():
     for book in borrowList:
