@@ -139,7 +139,6 @@ bList = open("booklist.txt-3","r")
 lLog = open("librarylog-3.txt", "r")
 
 bookList = [] # [book name, num of copies, restriction, tally, total copies]
-tallyList = [] # [book name, tally#]
 fineList = [] # [person name, amount]
 borrowList = [] # [book name, person name, day borrowed, days allowed]
 
