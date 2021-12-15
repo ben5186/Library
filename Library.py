@@ -15,7 +15,8 @@ def libraryRead():
         task = str(x).rstrip()
         if(task[0]=="B"):
             borrowBook(task)
-        #elif(task[0]=="R"):
+        elif(task[0]=="R"):
+            True
             #Return Function
         elif(task[0]=="P"):
             payFine(task)
@@ -81,10 +82,10 @@ def payFine(task):
             fineList.pop(x)
 
 def endTally():
-        for book in borrowList:
-       	    for element in bookList:
-            	if(element[0] == book[0]):
-               	element[3] += currentDay-book[2]
+    for book in borrowList:
+        for element in bookList:
+            if(element[0] == book[0]):
+                element[3]+=currentDay-book[2]
 
 def returnBook(book):
     firstTag = book.index("#")
@@ -115,8 +116,6 @@ def ratioBook():
         book.append(float(book[4]/book[3]))
 
 def tallyBook(days, bookName):
-    True
-def endTally():
     True
 
 def mostPopular():
@@ -153,5 +152,4 @@ returnBook("R#10#adam#harry potter")
 print(bookList)
 print(borrowList)
 print(fineList)
-
-#Ben is a friend  of mine
+libraryRead()
