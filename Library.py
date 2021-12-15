@@ -119,9 +119,6 @@ def ratioBook():
     for book in bookList:
         book.append(float(book[4]/book[3]))
 
-def tallyBook(days, bookName):
-    True
-
 def mostPopular():
     currentName="none"
     currentMost=0
