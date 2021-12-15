@@ -94,25 +94,26 @@ def returnBook(book):
         if element[0] == book[thirdTag+1:] and element[1] == book[secondTag+1:thirdTag]:
             tallyBook(int(book[firstTag+1:secondTag])-(element[2]+element[3], element[0])
             if element[3] > int(book[firstTag+1:secondTag])-(element[2]+element[3]):
-                restricted = True
-                for x in bookList:
-                    if x[0] == book[thirdTag+1:]:
-                        restricted = x[2]
-                if restricted:
-                    for person in fineList:
-                        if person == book[secondTag+1:thridTag]:
-                            book[1] += (int(book[firstTag+1:secondTag])-(element[2]+element[3]))*5
-                        else:
-                            fineList.append([book[secondTag+1:thirdTag],(int(book[firstTag+1:secondTag])-(element[2]+element[3]))*5])
-                else:
-                    for person in fineList:
-                        if person == book[secondTag+1:thridTag]:
-                            book[1] += (int(book[firstTag+1:secondTag])-(element[2]+element[3]))
-                        else:
-                            fineList.append([book[secondTag+1:thirdTag],(int(book[firstTag+1:secondTag])-(element[2]+element[3]))])
-def addFine(days, , name):
-    True
-def addAllFine():
+                addFine(int(book[firstTag+1:secondTag])-element[2], element[3], book[thirdTag+1:] ,book[secondTag+1:thirdTag])
+
+def addFine(days, allowedDays, bookName, name):
+    restricted = True
+    for x in bookList:
+        if x[0] == bookName:
+            restricted = x[2]
+    if restricted:
+        for fine in fineList:
+            if fine[0] == name:
+                fine[1] += (days-allowedDays)*5
+            else:
+                fineList.append(name,(days-allowedDays)*5])
+    else:
+        for fine in fineList:
+            if fine[0] == name:
+                fine[1] += (days-allowedDays)
+            else:
+                fineList.append(name,days-allowedDays)
+def endFine():
     True
 
 def ratioBook():
@@ -136,6 +137,7 @@ bList = open("booklist.txt-3","r")
 lLog = open("librarylog-3.txt", "r")
 
 bookList = [] # [book name, num of copies, restriction, tally, total copies]
+tallyList = [] # [book name, tally#]
 fineList = [] # [person name, amount]
 borrowList = [] # [book name, person name, day borrowed, days allowed]
 
