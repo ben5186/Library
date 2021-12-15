@@ -1,0 +1,9 @@
+Intro to python#2#TRUE
+Eye of the world#3#FALSE
+Goblet of fire#2#FALSE
+Intro to c#3#TRUE
+Lord of chaos#2#FALSE
+Dragon reborn#1#FALSE
+Intro to java#1#TRUE
+Intro to assembly#1#TRUE
+Intro to csharp#1#TRUE
