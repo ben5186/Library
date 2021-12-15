@@ -143,6 +143,12 @@ currentDay = 0
 
 initialBooks()
 libraryRead()
+addAllFine()
+endTally()
+ratioBook()
+mostPopular()
+#Ratio Sorting function
+#Tally Sorting function
 print(bookList)
 print(fineList)
 print(borrowList)
