@@ -113,8 +113,31 @@ def addFine(days, allowedDays, bookName, name):
                 fine[1] += (days-allowedDays)
             else:
                 fineList.append(name,days-allowedDays)
+
 def endFine():
-    True
+    for book in borrowList:
+    for element in bookList:
+        if(currentDay - book[2] < book[3]):
+            if(element[0] == book[0]):
+                if(element[2]):
+                    fine = (book[2] + book[3]) - currentDay)*5
+                    flag = True
+                    for i in fineList:
+                        if(book[1] == i[0]):
+                            i[1]+= fine
+                            flag = False
+                    if(flag):
+                        fineList.append([book[1],fine])
+                else:
+                    fine = (book[2] + book[3]) - currentDay)*1
+                    flag = True
+                    for i in fineList:
+                        if(book[1] == i[0]):
+                            i[1]+= fine
+                            flag = False
+                    if(flag):
+                        fineList.append([book[1],fine])
+
 
 def ratioBook():
     for book in bookList:
