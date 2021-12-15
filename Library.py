@@ -157,7 +157,7 @@ def ratioBook():
     for book in bookList:
         book.append(float(book[4]/book[3]))
 
-bList = open("booklist.txt-2","r")
+bList = open("booklist-2.txt","r")
 lLog = open("librarylog-3.txt", "r")
 
 bookList = [] # [book name, num of copies, restriction, tally, total copies]
