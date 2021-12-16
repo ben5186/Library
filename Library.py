@@ -12,6 +12,7 @@ def initialBooks():
 
 def libraryRead():
     for x in lLog:
+        global currentDay
         task = str(x).rstrip()
         if(task[0]=="B"):
             borrowBook(task)
