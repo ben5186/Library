@@ -91,6 +91,7 @@ def returnBook(book):
     thirdTag = secondTag+book[secondTag+1:].index("#")+1
     for element in borrowList:
         if element[0] == book[thirdTag+1:] and element[1] == book[secondTag+1:thirdTag]:
+            borrowList.pop(borrowList.index(element))
             tallyBook(int(book[firstTag+1:secondTag])-(element[2]), element[0])
             if element[3] > (int(book[firstTag+1:secondTag])-(element[2]+element[3])):
                 addFine(int(book[firstTag+1:secondTag])-element[2], element[3], book[thirdTag+1:] ,book[secondTag+1:thirdTag])
