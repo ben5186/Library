@@ -36,7 +36,7 @@ def addBook(book):
             toAdd = False
             break
     if(toAdd):
-        bookList.append([str(book[secondTag+1:]), 1, False, 0])
+        bookList.append([str(book[secondTag+1:]), 1, False, 0, 1])
 
 def borrowBook(book):
     firstTag = book.index("#")
@@ -92,8 +92,7 @@ def returnBook(book):
     thirdTag = secondTag+book[secondTag+1:].index("#")+1
     for element in borrowList:
         if element[0] == book[thirdTag+1:] and element[1] == book[secondTag+1:thirdTag]:
-            tallyBook(int(book[firstTag+1:secondTag])-(element[2]+element[3]), element[0])
-            print(element[3], int(book[firstTag+1:secondTag])-(element[2]+element[3]))
+            tallyBook(int(book[firstTag+1:secondTag])-(element[2]), element[0])
             if element[3] > (int(book[firstTag+1:secondTag])-(element[2]+element[3])):
                 addFine(int(book[firstTag+1:secondTag])-element[2], element[3], book[thirdTag+1:] ,book[secondTag+1:thirdTag])
 
@@ -155,6 +154,7 @@ def mostPopular():
 
 def ratioBook():
     for book in bookList:
+        print(book)
         book.append(float(book[4]/book[3]))
 
 bList = open("booklist-2.txt","r")
