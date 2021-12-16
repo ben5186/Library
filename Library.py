@@ -102,12 +102,16 @@ def addFine(days, allowedDays, bookName, name):
         if x[0] == bookName:
             restricted = x[2]
     if restricted:
+        if len(fineList) == 0:
+            fineList.append([name,(days-allowedDays)*5])
         for fine in fineList:
             if fine[0] == name:
                 fine[1] += (days-allowedDays)*5
             else:
                 fineList.append([name,(days-allowedDays)*5])
     else:
+        if len(fineList) == 0:
+            fineList.append([name,days-allowedDays])
         for fine in fineList:
             if fine[0] == name:
                 fine[1] += (days-allowedDays)
