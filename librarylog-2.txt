@@ -1,0 +1,140 @@
+B#1#Adam#Intro to python#5
+B#1#Adam#Goblet of fire#13
+B#1#Jennifer#Intro to python#4
+B#1#Jennifer#Eye of the world#25
+B#1#Jennifer#Goblet of fire#7
+B#1#Lauren#Eye of the world#16
+B#1#Greg#Eye of the world#12
+R#5#Jennifer#Intro to python
+R#6#Adam#Intro to python
+R#8#Jennifer#Goblet of fire
+B#9#Jennifer#Intro to python#6
+B#10#Adam#Intro to python#7
+B#10#Jennifer#Goblet of fire#11
+R#13#Greg#Eye of the world
+R#14#Adam#Goblet of fire
+R#15#Jennifer#Intro to python
+B#17#Jennifer#Intro to python#4
+R#17#Adam#Intro to python
+R#17#Lauren#Eye of the world
+B#18#Greg#Eye of the world#9
+B#19#Adam#Goblet of fire#10
+B#20#Lauren#Eye of the world#6
+R#21#Jennifer#Intro to python
+B#21#Adam#Intro to python#2
+R#21#Jennifer#Goblet of fire
+R#23#Adam#Intro to python
+B#24#Jennifer#Goblet of fire#6
+B#25#Jennifer#Intro to python#6
+R#26#Jennifer#Eye of the world
+R#26#Lauren#Eye of the world
+B#27#Lauren#Eye of the world#17
+B#27#Adam#Intro to python#4
+R#27#Greg#Eye of the world
+R#29#Adam#Goblet of fire
+B#30#Jennifer#Eye of the world#8
+R#30#Jennifer#Goblet of fire
+B#30#Adam#Goblet of fire#10
+A#30#Cooking 101
+R#31#Adam#Intro to python
+R#31#Jennifer#Intro to python
+B#32#Jennifer#Goblet of fire#8
+B#32#Greg#Eye of the world#12
+B#34#Adam#Intro to python#5
+B#35#Jennifer#Intro to python#5
+R#38#Jennifer#Eye of the world
+R#39#Adam#Intro to python
+R#40#Jennifer#Intro to python
+R#40#Jennifer#Goblet of fire
+R#40#Adam#Goblet of fire
+B#41#Adam#Goblet of fire#15
+B#42#Jennifer#Eye of the world#7
+B#42#Adam#Intro to python#1
+R#43#Adam#Intro to python
+B#43#Jennifer#Goblet of fire#7
+R#44#Lauren#Eye of the world
+R#44#Greg#Eye of the world
+B#45#Adam#Intro to python#5
+B#45#Jennifer#Intro to python#6
+A#45#Intro to python
+B#47#Greg#Eye of the world#5
+R#49#Jennifer#Eye of the world
+B#49#Lauren#Eye of the world#4
+R#50#Jennifer#Goblet of fire
+R#50#Adam#Intro to python
+B#50#Greg#Intro to python#5
+B#50#Greg#Cooking 101#10
+R#51#Jennifer#Intro to python
+R#52#Greg#Eye of the world
+B#53#Jennifer#Goblet of fire#5
+R#53#Lauren#Eye of the world
+B#53#Adam#Intro to python#4
+B#53#Greg#Eye of the world#25
+B#54#Jennifer#Eye of the world#27
+B#54#Jennifer#Intro to python#6
+B#55#Lauren#Eye of the world#25
+R#55#Greg#Intro to python
+R#56#Adam#Goblet of fire
+R#57#Adam#Intro to python
+R#58#Jennifer#Goblet of fire
+B#58#Greg#Intro to python#4
+B#59#Adam#Goblet of fire#8
+R#60#Jennifer#Intro to python
+R#60#Greg#Cooking 101
+B#61#Jennifer#Goblet of fire#7
+B#61#Adam#Intro to python#6
+R#62#Greg#Intro to python
+B#64#Jennifer#Intro to python#3
+B#64#Greg#Cooking 101#2
+R#66#Greg#Cooking 101
+R#67#Adam#Intro to python
+R#67#Adam#Goblet of fire
+B#67#Greg#Intro to python#4
+B#67#Greg#Cooking 101#15
+R#67#Jennifer#Intro to python
+R#68#Jennifer#Goblet of fire
+B#69#Adam#Intro to python#3
+B#70#Jennifer#Goblet of fire#7
+R#71#Greg#Intro to python
+R#72#Adam#Intro to python
+B#72#Jennifer#Intro to python#7
+B#72#Adam#Goblet of fire#6
+B#73#Adam#Intro to python#4
+B#76#Greg#Intro to python#3
+R#77#Jennifer#Goblet of fire
+R#77#Adam#Intro to python
+R#78#Greg#Eye of the world
+R#78#Adam#Goblet of fire
+B#79#Adam#Goblet of fire#4
+R#79#Jennifer#Intro to python
+B#79#Jennifer#Goblet of fire#7
+R#79#Greg#Intro to python
+R#80#Lauren#Eye of the world
+B#81#Adam#Intro to python#5
+R#81#Jennifer#Eye of the world
+B#82#Greg#Eye of the world#25
+R#82#Greg#Cooking 101
+R#83#Adam#Goblet of fire
+B#83#Lauren#Eye of the world#17
+B#84#Jennifer#Intro to python#4
+B#84#Greg#Intro to python#3
+B#85#Jennifer#Eye of the world#15
+B#85#Greg#Cooking 101#19
+R#86#Adam#Intro to python
+R#86#Jennifer#Goblet of fire
+B#87#Adam#Goblet of fire#12
+R#87#Greg#Intro to python
+R#88#Jennifer#Intro to python
+B#88#Jennifer#Goblet of fire#8
+B#89#Jennifer#Intro to python#7
+B#91#Adam#Intro to python#1
+B#91#Greg#Intro to python#6
+R#92#Adam#Intro to python
+B#95#Adam#Intro to python#5
+R#96#Jennifer#Goblet of fire
+R#96#Jennifer#Intro to python
+R#97#Greg#Intro to python
+B#98#Jennifer#Intro to python#4
+B#98#Greg#Intro to python#7
+R#99#Adam#Goblet of fire
+100
