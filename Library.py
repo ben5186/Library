@@ -59,8 +59,6 @@ def borrowBook(book):
     if not(hasFine) and found:
         borrowList.append([str(book[thirdTag+1:fourthTag]),str(book[secondTag+1:thirdTag]),
                    int(book[firstTag+1:secondTag]),int(book[fourthTag+1:])])
-    else:
-        #print("Can't be borrowed")
 
 def tallyBook(days, bookName):
     for book in bookList:
