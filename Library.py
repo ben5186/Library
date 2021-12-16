@@ -60,7 +60,7 @@ def borrowBook(book):
         borrowList.append([str(book[thirdTag+1:fourthTag]),str(book[secondTag+1:thirdTag]),
                    int(book[firstTag+1:secondTag]),int(book[fourthTag+1:])])
     else:
-        print("Can't be borrowed")
+        #print("Can't be borrowed")
 
 def tallyBook(days, bookName):
     for book in bookList:
@@ -146,7 +146,7 @@ def ratioBook():
 def mostPopular():
     currentName="none"
     currentMost=0
-    for book in booklist:
+    for book in bookList:
          if(int(book[3])>currentMost):
              currentMost=int(book[3])
              currentName=book[0]
@@ -154,7 +154,6 @@ def mostPopular():
 
 def ratioBook():
     for book in bookList:
-        print(book)
         book.append(float(book[4]/book[3]))
 
 bList = open("booklist-2.txt","r")
