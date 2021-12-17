@@ -96,17 +96,25 @@ def returnBook(book):
     firstTag = book.index("#")
     secondTag = firstTag+book[firstTag+1:].index("#")+1
     thirdTag = secondTag+book[secondTag+1:].index("#")+1
+
+    day = book[firstTag+1:secondTag]
+    name = book[secondTag+1:thirdTag]
+    bookName = book[thirdTag+1:]
     for element in borrowList:
-        if element[0] == book[thirdTag+1:] and element[1] == book[secondTag+1:thirdTag]:
+        #element[0] = book name, [1] person name, [2] day borrowed, [3] days allpwed
+        if element[0] == bookName and element[1] == name:
             borrowList.pop(borrowList.index(element))
-            tallyBook(int(book[firstTag+1:secondTag])-(element[2]), element[0])
-            if element[3] > (int(book[firstTag+1:secondTag])-(element[2]+element[3])):
-                addFine(int(book[firstTag+1:secondTag])-element[2], element[3], book[thirdTag+1:] ,book[secondTag+1:thirdTag])
+            tallyBook(int(day)-(element[2]), element[0])
+            if element[3] < (int(day)-(element[2])):
+                print("Line 104: book to be added")
+                addFine(int(day)-element[2], element[3], bookName, name)
 
 def addFine(days, allowedDays, bookName, name):
-    print("days:", days, "allowedDays:", allowedDays, "bookName:", bookName, "name:", name)
+    #print("days:", days, "allowedDays:", allowedDays, "bookName:", bookName, "name:", name)
+    print(fineList)
     restricted = True
     for x in bookList:
+        #x[0] = bookName, x[2] = restriction
         if x[0] == bookName:
             restricted = x[2]
     if restricted:
@@ -116,6 +124,7 @@ def addFine(days, allowedDays, bookName, name):
             for fine in fineList:
                 if fine[0] == name:
                     fine[1] += (days-allowedDays)*5
+                    break
                 else:
                     fineList.append([name,(days-allowedDays)*5])
     else:
@@ -125,10 +134,14 @@ def addFine(days, allowedDays, bookName, name):
             for fine in fineList:
                 if fine[0] == name:
                     fine[1] += (days-allowedDays)
+                    break
                 else:
                     fineList.append([name,days-allowedDays])
+    print(fineList)
 
 def endFine():
+    global currentDay
+    print("Line 133: end fine")
     for book in borrowList:
         for element in bookList:
             if(currentDay - book[2] > book[3]):
