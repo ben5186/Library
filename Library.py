@@ -79,7 +79,7 @@ def payFine(task):
     tag3=int(task.find("#",tag2+1))
     person=task[tag2+1:tag3]
     day=task[tag1+1:tag2]
-    paid=task[tag3+1]
+    paid=int(task[tag3+1])
     for x in fineList:
         if(x[0]==person):
             x[1]=x[1]-paid
@@ -103,6 +103,9 @@ def returnBook(book):
     for element in borrowList:
         #element[0] = book name, [1] person name, [2] day borrowed, [3] days allpwed
         if element[0] == bookName and element[1] == name:
+            for x in bookList:
+                if x[0] == bookName:
+                    x[1] += 1
             borrowList.pop(borrowList.index(element))
             tallyBook(int(day)-(element[2]), element[0])
             if element[3] < (int(day)-(element[2])):
@@ -121,22 +124,24 @@ def addFine(days, allowedDays, bookName, name):
         if len(fineList) == 0:
             fineList.append([name,(days-allowedDays)*5])
         else:
+            found = False
             for fine in fineList:
                 if fine[0] == name:
+                    found = True
                     fine[1] += (days-allowedDays)*5
-                    break
-                else:
-                    fineList.append([name,(days-allowedDays)*5])
+            if not(found):
+                fineList.append([name,(days-allowedDays)*5])
     else:
         if len(fineList) == 0:
             fineList.append([name,days-allowedDays])
         else:
+            found = False
             for fine in fineList:
                 if fine[0] == name:
+                    found = True
                     fine[1] += (days-allowedDays)
-                    break
-                else:
-                    fineList.append([name,days-allowedDays])
+            if not(found):
+                fineList.append([name,days-allowedDays])
     print(fineList)
 
 def endFine():
