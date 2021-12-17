@@ -97,6 +97,7 @@ def returnBook(book):
                 addFine(int(book[firstTag+1:secondTag])-element[2], element[3], book[thirdTag+1:] ,book[secondTag+1:thirdTag])
 
 def addFine(days, allowedDays, bookName, name):
+    print("days:", days, "allowedDays:", allowedDays, "bookName:", bookName, "name:", name)
     restricted = True
     for x in bookList:
         if x[0] == bookName:
@@ -104,19 +105,21 @@ def addFine(days, allowedDays, bookName, name):
     if restricted:
         if len(fineList) == 0:
             fineList.append([name,(days-allowedDays)*5])
-        for fine in fineList:
-            if fine[0] == name:
-                fine[1] += (days-allowedDays)*5
-            else:
-                fineList.append([name,(days-allowedDays)*5])
+        else:
+            for fine in fineList:
+                if fine[0] == name:
+                    fine[1] += (days-allowedDays)*5
+                else:
+                    fineList.append([name,(days-allowedDays)*5])
     else:
         if len(fineList) == 0:
             fineList.append([name,days-allowedDays])
-        for fine in fineList:
-            if fine[0] == name:
-                fine[1] += (days-allowedDays)
-            else:
-                fineList.append([name,days-allowedDays])
+        else:
+            for fine in fineList:
+                if fine[0] == name:
+                    fine[1] += (days-allowedDays)
+                else:
+                    fineList.append([name,days-allowedDays])
 
 def endFine():
     for book in borrowList:
