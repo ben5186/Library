@@ -77,7 +77,7 @@ def payFine(task):
         if(x[0]==person):
             x[1]=x[1]-paid
         if(x[1]<=0):
-            fineList.pop(x)
+            fineList.pop(fineList.index(x))
 
 def endTally():
     for book in borrowList:
@@ -124,10 +124,10 @@ def addFine(days, allowedDays, bookName, name):
 def endFine():
     for book in borrowList:
         for element in bookList:
-            if(currentDay - book[2] < book[3]):
+            if(currentDay - book[2] > book[3]):
                 if(element[0] == book[0]):
                     if(element[2]):
-                        fine = (book[2] + book[3] - currentDay)*5
+                        fine = (currentDay - book[2] + book[3])*5
                         flag = True
                         for i in fineList:
                             if(book[1] == i[0]):
@@ -136,7 +136,7 @@ def endFine():
                         if(flag):
                             fineList.append([book[1],fine])
                     else:
-                        fine = (book[2] + book[3] - currentDay)
+                        fine = (currentDay - book[2] + book[3])
                         flag = True
                         for i in fineList:
                             if(book[1] == i[0]):
@@ -161,7 +161,7 @@ def mostPopular():
 
 def ratioBook():
     for book in bookList:
-        book.append(float(book[4]/book[3]))
+        book.append(float(book[3]/book[4]))
 
 bList = open("booklist-2.txt","r")
 lLog = open("librarylog-3.txt", "r")
