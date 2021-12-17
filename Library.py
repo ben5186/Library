@@ -46,10 +46,17 @@ def borrowBook(book):
     fourthTag = thirdTag+book[thirdTag+1:].index("#")+1
     found = False
     hasFine = False
+    has3Books = False
+    booksOut = 0
     for fine in fineList:
         if fine[0] == book[secondTag+1:thirdTag]:
             hasFine = True
-    if not(hasFine):
+    for x in borrowList:
+        if x[1] == book[secondTag+1:thirdTag]:
+            booksOut += 1
+    if booksOut >= 3:
+        has3Books = True
+    if not(hasFine and has3Books):
         for element in bookList:
             if book[thirdTag+1:fourthTag] == element[0]:
                 if element[1] == 0:
@@ -57,7 +64,7 @@ def borrowBook(book):
                 else:
                     found = True
                     element[1] -= 1
-    if not(hasFine) and found:
+    if not(hasFine and has3Books) and found:
         borrowList.append([str(book[thirdTag+1:fourthTag]),str(book[secondTag+1:thirdTag]),
                    int(book[firstTag+1:secondTag]),int(book[fourthTag+1:])])
 
