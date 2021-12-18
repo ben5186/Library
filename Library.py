@@ -191,7 +191,8 @@ def ratioBook():
         book.append(float(book[3]/book[4]))
 
 def tallySort():
-    bklst = bookList
+    bklst=[]
+    bklst = bookList.copy()
     out = []
 
     while len(bklst) > 0:
@@ -205,7 +206,8 @@ def tallySort():
     bookList = bklst
 
 def ratioSort():
-    bklst = bookList
+    bklst=[]
+    bklst = bookList.copy()
     out = []
     while len(bklst) > 0:
         temp = bklst[0]
@@ -230,7 +232,7 @@ libraryRead()
 endFine()
 endTally()
 ratioBook()
-ratioSort()
+#ratioSort()
 tallySort()
 mostPopular()
 
