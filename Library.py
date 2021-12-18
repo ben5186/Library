@@ -191,6 +191,7 @@ def ratioBook():
         book.append(float(book[3]/book[4]))
 
 def tallySort():
+    global bookList
     bklst=[]
     bklst = bookList.copy()
     out = []
@@ -200,12 +201,13 @@ def tallySort():
         for x in range( len(bklst) ):
             if bklst[x][3] < temp[3]:
                 temp = bklst[x]
-        out.append(temp)
-        bklst.remove(temp)
+        out.append(bklist.index(temp))
+        bklst.remove(bklist.index(temp))
 
-    bookList = bklst
+
 
 def ratioSort():
+    global bookList
     bklst=[]
     bklst = bookList.copy()
     out = []
@@ -214,9 +216,8 @@ def ratioSort():
         for x in range( len(bklst) ):
             if bklst[x][6] < temp[6]:
                 temp = bklst[x]
-        out.append(temp)
-        bklst.remove(temp)
-    bookList = bklst
+        out.append(bklst.index(temp))
+        bklst.remove(bklst.index(temp))
 
 bList = open("booklist-2.txt","r")
 lLog = open("librarylog-3.txt", "r")
