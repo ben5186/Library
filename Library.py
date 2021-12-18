@@ -207,7 +207,6 @@ def tallySort():
 def ratioSort():
     bklst = bookList
     out = []
-
     while len(bklst) > 0:
         temp = bklst[0]
         for x in range( len(bklst) ):
@@ -215,7 +214,6 @@ def ratioSort():
                 temp = bklst[x]
         out.append(temp)
         bklst.remove(temp)
-
     bookList = bklst
 
 bList = open("booklist-2.txt","r")
@@ -232,6 +230,8 @@ libraryRead()
 endFine()
 endTally()
 ratioBook()
+ratioSort()
+tallySort()
 mostPopular()
 
 print(bookList)
