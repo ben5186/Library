@@ -111,12 +111,9 @@ def returnBook(book):
             borrowList.pop(borrowList.index(element))
             tallyBook(int(day)-(element[2]), element[0])
             if element[3] < (int(day)-(element[2])):
-                print("Line 104: book to be added")
                 addFine(int(day)-element[2], element[3], bookName, name)
 
 def addFine(days, allowedDays, bookName, name):
-    #print("days:", days, "allowedDays:", allowedDays, "bookName:", bookName, "name:", name)
-    print(fineList)
     restricted = True
     for x in bookList:
         #x[0] = bookName, x[2] = restriction
@@ -144,11 +141,9 @@ def addFine(days, allowedDays, bookName, name):
                     fine[1] += (days-allowedDays)
             if not(found):
                 fineList.append([name,days-allowedDays])
-    print(fineList)
 
 def endFine():
     global currentDay
-    print("Line 133: end fine")
     for book in borrowList:
         for element in bookList:
             if(currentDay - book[2] > book[3]):
@@ -172,11 +167,6 @@ def endFine():
                             if(flag):
                                 fineList.append([book[1],fine])
 
-
-def ratioBook():
-    for book in bookList:
-        book.append(float(book[4]/book[3]))
-
 def mostPopular():
     currentName="none"
     currentMost=0
@@ -199,10 +189,11 @@ def tallySort():
     while len(bklst) > 0:
         temp = bklst[0]
         for x in range( len(bklst) ):
-            if bklst[x][3] < temp[3]:
+            if bklst[x][3] > temp[3]:
                 temp = bklst[x]
-        out.append(bklist.index(temp))
-        bklst.remove(bklist.index(temp))
+        out.append(temp)
+        bklst.remove(temp)
+    return(out)
 
 
 
@@ -214,10 +205,15 @@ def ratioSort():
     while len(bklst) > 0:
         temp = bklst[0]
         for x in range( len(bklst) ):
+<<<<<<< HEAD
             if bklst[x][5] < temp[5]:
+=======
+            if bklst[x][5] > temp[5]:
+>>>>>>> 2fcf2f3b2d692b68b809d650ec518ac777633703
                 temp = bklst[x]
-        out.append(bklst.index(temp))
-        bklst.remove(bklst.index(temp))
+        out.append(temp)
+        bklst.remove(temp)
+    return(out)
 
 bList = open("booklist-2.txt","r")
 lLog = open("librarylog-3.txt", "r")
@@ -233,8 +229,8 @@ libraryRead()
 endFine()
 endTally()
 ratioBook()
-ratioSort()
-tallySort()
+print(ratioSort())
+print(tallySort())
 mostPopular()
 
 print(bookList)
