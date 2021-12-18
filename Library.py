@@ -1,3 +1,5 @@
+##Collaborators:  Ben Siri, Yuval Levi, Jack Scott, Nathaniel Yerage
+
 def initialBooks():
     for book in bList:
         book = str(book).rstrip()
