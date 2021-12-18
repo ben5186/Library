@@ -232,7 +232,7 @@ libraryRead()
 endFine()
 endTally()
 ratioBook()
-#ratioSort()
+ratioSort()
 tallySort()
 mostPopular()
 
