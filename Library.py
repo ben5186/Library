@@ -214,7 +214,7 @@ def ratioSort():
     while len(bklst) > 0:
         temp = bklst[0]
         for x in range( len(bklst) ):
-            if bklst[x][6] < temp[6]:
+            if bklst[x][5] < temp[5]:
                 temp = bklst[x]
         out.append(bklst.index(temp))
         bklst.remove(bklst.index(temp))
